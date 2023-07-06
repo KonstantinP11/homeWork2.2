@@ -34,4 +34,5 @@ public class Hogwarts {
     Slytherin graham = new Slytherin("Graham Montague", 15, 15, 15, 15, 15, 15, 15);
     Slytherin gregory = new Slytherin("Gregory Goyle", 9, 9, 9, 9, 9, 9, 9);
 
+
 }
