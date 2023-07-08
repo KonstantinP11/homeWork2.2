@@ -11,4 +11,29 @@ public class Kogtevran extends Hogwarts{
         this.witty = witty;
         this.creative = creative;
     }
+
+    public int getSmart() {
+        return smart;
+    }
+
+    public int getWise() {
+        return wise;
+    }
+
+    public int getWitty() {
+        return witty;
+    }
+
+    public int getCreative() {
+        return creative;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", Kogtevran: " +
+                "smart=" + smart +
+                ", wise=" + wise +
+                ", witty=" + witty +
+                ", creative=" + creative;
+    }
 }

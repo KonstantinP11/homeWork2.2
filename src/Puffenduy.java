@@ -9,4 +9,24 @@ public class Puffenduy extends Hogwarts{
         this.loyal = loyal;
         this.honest = honest;
     }
+
+    public int getHardworking() {
+        return hardworking;
+    }
+
+    public int getLoyal() {
+        return loyal;
+    }
+
+    public int getHonest() {
+        return honest;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", Puffenduy: " +
+                "hardworking=" + hardworking +
+                ", loyal=" + loyal +
+                ", honest=" + honest;
+    }
 }

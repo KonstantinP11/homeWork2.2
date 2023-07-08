@@ -8,6 +8,26 @@ public class Gryffindor extends Hogwarts {
         this.nobility = nobility;
         this.honor = honor;
         this.courage = courage;
-
     }
+
+    public int getNobility() {
+        return nobility;
+    }
+
+    public int getHonor() {
+        return honor;
+    }
+
+    public int getCourage() {
+        return courage;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", Gryffindor: " +
+                "nobility=" + nobility +
+                ", honor=" + honor +
+                ", courage=" + courage;
+    }
+
 }
