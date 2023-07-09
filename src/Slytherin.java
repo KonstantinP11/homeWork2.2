@@ -1,4 +1,4 @@
-public class Slytherin extends Hogwarts{
+public class Slytherin extends Hogwarts {
     private int cunning;
     private int determination;
     private int ambition;
@@ -15,26 +15,6 @@ public class Slytherin extends Hogwarts{
         this.lustForPower = lustForPower;
     }
 
-    public int getCunning() {
-        return cunning;
-    }
-
-    public int getDetermination() {
-        return determination;
-    }
-
-    public int getAmbition() {
-        return ambition;
-    }
-
-    public int getResourcefulness() {
-        return resourcefulness;
-    }
-
-    public int getLustForPower() {
-        return lustForPower;
-    }
-
     @Override
     public String toString() {
         return super.toString() + ", Slytherin: " +
@@ -43,5 +23,21 @@ public class Slytherin extends Hogwarts{
                 ", ambition=" + ambition +
                 ", resourcefulness=" + resourcefulness +
                 ", lustForPower=" + lustForPower;
+    }
+
+    public void compareTo(Slytherin other) {
+        int sumThis = this.cunning + this.determination + this.ambition + this.resourcefulness + this.lustForPower;
+        int sumOther = other.cunning + other.determination + other.ambition + other.resourcefulness + other.lustForPower;
+        if (sumThis > sumOther) {
+            printResultCompare(this, other);
+        } else if (sumOther > sumThis) {
+            printResultCompare(this, other);
+        } else {
+            System.out.println("Студенты " + this.getName() + " и " + other.getName() + " одинаково сильны");
+        }
+    }
+
+    private void printResultCompare(Slytherin bestStudent, Slytherin worstStudent) {
+        System.out.println(bestStudent.getName() + " лучший Слизеринец, чем " + worstStudent.getName());
     }
 }
