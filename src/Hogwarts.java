@@ -1,4 +1,4 @@
-public class Hogwarts {
+public abstract class Hogwarts {
     private String name;
     private int conjure;
     private int transgress;
@@ -13,26 +13,26 @@ public class Hogwarts {
         return name;
     }
 
-    public int getConjure() {
-        return conjure;
+    @Override
+    public String toString() {
+        return "name='" + name + '\'' +
+                ", conjure=" + conjure +
+                ", transgress=" + transgress;
     }
 
-    public int getTransgress() {
-        return transgress;
+    public void compareToHogwarts(Hogwarts other) {
+        int sumThis = this.conjure + this.transgress;
+        int sumOther = other.conjure + other.transgress;
+        if (sumThis > sumOther) {
+            printResultCompare(this, other);
+        } else if (sumOther > sumThis) {
+            printResultCompare(other, this);
+        } else {
+            System.out.println("Студенты " + this.name + " и " + other.name + " обладают одинаковой мощностью магии");
+        }
     }
 
-    Gryffindor harry = new Gryffindor("Harry Potter", 30, 30, 40, 30, 50);
-    Gryffindor hermione = new Gryffindor("Hermione Grangerr", 35, 20, 30, 50, 50);
-    Gryffindor ron = new Gryffindor("Ron Weasley", 20, 10, 20, 20, 20);
-    Puffenduy zacharias = new Puffenduy("Zacharias Smith", 10, 10, 10, 10, 10);
-    Puffenduy cedric = new Puffenduy("Cedric Diggory", 20, 20, 20, 20, 20);
-    Puffenduy justin = new Puffenduy("Justin Finch-Fletchley", 30, 00, 30, 30, 10);
-    Kogtevran zhou = new Kogtevran("Zhou Chang", 10, 10, 20, 20, 10, 10);
-    Kogtevran padma = new Kogtevran("Padma Patil", 20, 30, 20, 10, 10, 20);
-    Kogtevran marcus = new Kogtevran("Marcus Belby", 20, 20, 20, 20, 15, 15);
-    Slytherin draco = new Slytherin("Draco Malfoy", 30, 20, 20, 20, 30, 25, 10);
-    Slytherin graham = new Slytherin("Graham Montague", 15, 15, 15, 15, 15, 15, 15);
-    Slytherin gregory = new Slytherin("Gregory Goyle", 9, 9, 9, 9, 9, 9, 9);
-
-
+    private void printResultCompare(Hogwarts bestStudent, Hogwarts worstStudent) {
+        System.out.println(bestStudent.getName() + " обладает бОльшей мощностью магии, чем " + worstStudent.getName());
+    }
 }
