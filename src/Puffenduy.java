@@ -24,7 +24,7 @@ public class Puffenduy extends Hogwarts {
         if (sumThis > sumOther) {
             printResultCompare(this, other);
         } else if (sumOther > sumThis) {
-            printResultCompare(this, other);
+            printResultCompare(other, this);
         } else {
             System.out.println("Студенты " + this.getName() + " и " + other.getName() + " одинаково сильны");
         }

@@ -26,7 +26,7 @@ public abstract class Hogwarts {
         if (sumThis > sumOther) {
             printResultCompare(this, other);
         } else if (sumOther > sumThis) {
-            printResultCompare(this, other);
+            printResultCompare(other, this);
         } else {
             System.out.println("Студенты " + this.name + " и " + other.name + " обладают одинаковой мощностью магии");
         }
